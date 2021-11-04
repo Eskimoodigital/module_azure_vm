@@ -11,7 +11,7 @@ resource "azurerm_network_interface" "example" {
 
   ip_configuration {
     name                          = "internal"
-    subnet_id                     = module.spoke_azure_1[0].vnet.subnets[0].subnet_id
+    subnet_id                     = var.cidr
     private_ip_address_allocation = "Dynamic"
     public_ip_address_id          = azurerm_public_ip.example.id
 
@@ -30,7 +30,7 @@ resource "azurerm_public_ip" "example" {
 
 
 resource "azurerm_linux_virtual_machine" "example" {
-  name                = "EskimooTest"
+  name                = var.name
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
 
