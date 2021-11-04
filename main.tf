@@ -1,16 +1,16 @@
 resource "azurerm_resource_group" "example" {
-  name     = var.rgname
+  name     = var.rg_name
   location = "West Europe"
 }
 
 resource "azurerm_network_interface" "example" {
-  name                = var.nicname
+  name                = var.nic_name
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
 
 
   ip_configuration {
-    name                          = var.ipname
+    name                          = var.ip_name
     subnet_id                     = var.cidr
     private_ip_address_allocation = "Dynamic"
     public_ip_address_id          = azurerm_public_ip.example.id
@@ -20,7 +20,7 @@ resource "azurerm_network_interface" "example" {
 }
 
 resource "azurerm_public_ip" "example" {
-  name                = "EskimooPublicIp1"
+  name                = var.publicip_name
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
 

@@ -9,19 +9,25 @@ variable "cidr" {
   default     = ""
 }
 
-variable "ipname" {
+variable "ip_name" {
   description = "Custom name for publicip"
   type        = string
   default     = ""
 }
 
-variable "nicname" {
+variable "publicip_name" {
+  description = "Custom name for publicip"
+  type        = string
+  default     = ""
+}
+
+variable "nic_name" {
   description = "Custom name for nic"
   type        = string
   default     = ""
 }
 
-variable "rgname" {
+variable "rg_name" {
   description = "Custom name for rg"
   type        = string
   default     = ""
