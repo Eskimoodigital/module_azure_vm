@@ -8,3 +8,18 @@ variable "cidr" {
   type        = string
   default     = ""
 }
+
+variable "ipname" {
+  description = "Custom name for publicip"
+  type        = string
+}
+
+variable "nicname" {
+  description = "Custom name for nic"
+  type        = string
+}
+
+variable "rgname" {
+  description = "Custom name for rg"
+  type        = string
+}
