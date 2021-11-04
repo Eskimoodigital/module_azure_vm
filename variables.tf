@@ -12,16 +12,19 @@ variable "cidr" {
 variable "ipname" {
   description = "Custom name for publicip"
   type        = string
+  default     = ""
 }
 
 variable "nicname" {
   description = "Custom name for nic"
   type        = string
+  default     = ""
 }
 
 variable "rgname" {
   description = "Custom name for rg"
   type        = string
+  default     = ""
 }
 
 #
