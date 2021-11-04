@@ -23,3 +23,5 @@ variable "rgname" {
   description = "Custom name for rg"
   type        = string
 }
+
+#
