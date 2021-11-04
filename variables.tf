@@ -10,7 +10,7 @@ variable "cidr" {
 }
 
 variable "ip_name" {
-  description = "Custom name for publicip"
+  description = "Custom name for ipconfig"
   type        = string
   default     = ""
 }
